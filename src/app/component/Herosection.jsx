@@ -18,9 +18,9 @@ export default function Herosection() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-auto bg-black text-white mt">
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center"
+        className="absolute inset-0 z-0 bg-cover bg-center "
         style={{
           backgroundImage: "url('/Images/BackgroundImage.png')",
           opacity: 0.5
@@ -117,7 +117,7 @@ export default function Herosection() {
               <div className="overflow-x-auto -mx-3 px-3 bg-black" >
                 <table className="  min-w-full font-mono text-sm text-white">
                   <thead>
-                    <tr className="border-b border-dotted border-white-700 md: border-t border-t-0 border-dotted border-white-700 ">
+                    <tr className="border-b border-dotted border-white-700 sm:: border-t border-t-0 border-dotted border-white-700 ">
                       <th className="text-yellow-400 border-r border-dotted py-2 text-left px-2 sm:pr-8">ID</th>
                       <th className="text-green-400 py-2 text-left  sm:pr-8 border-r px-2 border-dotted ">Name</th>
                       <th className="text-green-400 py-2 text-left sm:pr-8 border-r px-2 border-dotted ">Skills</th>
