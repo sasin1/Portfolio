@@ -141,7 +141,7 @@ export default function ExpertiseSection() {
                                         </div>
                                     </div>
                                     <div>
-                                        <h3 className="text-green-400 font-bold text-lg">Backend</h3>
+                                     W   <h3 className="text-green-400 font-bold text-lg">Backend</h3>
                                         <p className="text-white font-bold">Development</p>
                                     </div>
                                 </div>
