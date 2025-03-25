@@ -1,10 +1,12 @@
 "use client"
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { Link } from 'lucide-react';
 
 const MyworkSection = () => {
+    const router = useRouter();
     const [activeCard, setActiveCard] = useState(null);
     const [deviceType, setDeviceType] = useState('desktop');
-
 
     useEffect(() => {
         const handleResize = () => {
@@ -24,8 +26,8 @@ const MyworkSection = () => {
             }
         };
 
+        // Initial call and event listener
         handleResize();
-
         window.addEventListener('resize', handleResize);
 
         return () => window.removeEventListener('resize', handleResize);
@@ -35,15 +37,14 @@ const MyworkSection = () => {
         if (deviceType === 'laptop' || deviceType === 'desktop') {
             setActiveCard(cardIndex === activeCard ? null : cardIndex);
         } else if (deviceType === 'tablet') {
-
             setActiveCard(cardIndex === activeCard ? null : cardIndex);
         }
-
     };
+
+
 
     const getCardStyle = (cardIndex) => {
         if (deviceType === 'mobile') {
-
             return {
                 position: 'relative',
                 width: '100%',
@@ -55,7 +56,6 @@ const MyworkSection = () => {
                 overflow: "hidden"
             };
         } else if (deviceType === 'tablet') {
-
             return {
                 position: 'relative',
                 width: '100%',
@@ -68,7 +68,6 @@ const MyworkSection = () => {
                 transform: activeCard === cardIndex ? 'scale(1.05)' : 'scale(1)'
             };
         } else {
-
             const baseOffset = {
                 1: { x: 0, y: 0, rotate: 0 },
                 2: { x: -30, y: -15, rotate: -3 },
@@ -120,13 +119,21 @@ const MyworkSection = () => {
 
     return (
         <div className="min-h-screen bg-black text-white p-4 md:p-6 lg:p-8 flex flex-col items-center justify-start">
+            <h1
+                className="text-2xl md:text-4xl font-mono mt-6 md:mt-8 lg:mt-20 mb-16 md:mb-3 lg:mb-36 tracking-wider text-center"
+                id='Works'
+            >
+                My Works
+            </h1>
 
-            <h1 className="text-2xl md:text-4xl font-mono mt-6 md:mt-8 lg:mt-20 mb-16 md:mb-3 lg:mb-36 tracking-wider text-center">My Works</h1>
-
-            <div className={`w-full max-w-5xl mx-auto ${deviceType === 'tablet' ? 'flex flex-col items-center' : 'flex flex-col lg:flex-row items-center'} gap-4 lg:gap-16 px-4 md:px-6 lg:px-12`}>
-
-                <div className={`${getLayoutClass()} w-full ${deviceType === 'laptop' || deviceType === 'desktop' ? 'lg:w-3/5' : 'w-full'} mt-6 md:mt-10`}>
-                    {/* Card 1 */}
+            <div
+                className={`w-full max-w-5xl mx-auto ${deviceType === 'tablet' ? 'flex flex-col items-center' : 'flex flex-col lg:flex-row items-center'} gap-4 lg:gap-16 px-4 md:px-6 lg:px-12`}
+            >
+                {/* Project Cards Container */}
+                <div
+                    className={`${getLayoutClass()} w-full ${deviceType === 'laptop' || deviceType === 'desktop' ? 'lg:w-3/5' : 'w-full'} mt-6 md:mt-10`}
+                >
+                    {/* Portfolio Project Card */}
                     <div
                         key={1}
                         className={`${deviceType !== 'desktop' && deviceType !== 'laptop' ? '' : 'absolute'} w-full rounded-lg shadow-xl transition-all duration-500 cursor-pointer bg-black text-white border-2 border-gray-500`}
@@ -150,7 +157,7 @@ const MyworkSection = () => {
                         </div>
                     </div>
 
-                    {/* Card 2 */}
+                    {/* House of Momos Project Card */}
                     <div
                         key={2}
                         className={`${deviceType !== 'desktop' && deviceType !== 'laptop' ? '' : 'absolute'} w-full rounded-lg shadow-xl transition-all duration-500 cursor-pointer bg-amber-50 text-gray-800 border-2 border-amber-200`}
@@ -174,7 +181,7 @@ const MyworkSection = () => {
                         </div>
                     </div>
 
-                    {/* Card 3 */}
+                    {/* Shree Brow Bar Project Card */}
                     <div
                         key={3}
                         className={`${deviceType !== 'desktop' && deviceType !== 'laptop' ? '' : 'absolute'} w-full rounded-lg shadow-xl transition-all duration-500 cursor-pointer bg-black text-white border-2 border-pink-500`}
@@ -198,7 +205,7 @@ const MyworkSection = () => {
                         </div>
                     </div>
 
-                    {/* Card 4 */}
+                    {/* Wevona Project Card */}
                     <div
                         key={4}
                         className={`${deviceType !== 'desktop' && deviceType !== 'laptop' ? '' : 'absolute'} w-full rounded-lg shadow-xl transition-all duration-500 cursor-pointer bg-black text-white border-2 border-green-500`}
@@ -223,16 +230,23 @@ const MyworkSection = () => {
                     </div>
                 </div>
 
-
-                <div className={`w-full ${deviceType === 'tablet' ? 'mt-8' : deviceType === 'laptop' || deviceType === 'desktop' ? 'lg:w-2/5' : 'w-full'} flex flex-col items-center ${deviceType === 'laptop' || deviceType === 'desktop' ? 'lg:items-start' : 'items-center'} justify-center mt-10 lg:mt-0`}>
-                    <div className={`${deviceType === 'laptop' || deviceType === 'desktop' ? 'text-center lg:text-left' : 'text-center'} max-w-md`}>
+                {/* Project Description Section */}
+                <div
+                    className={`w-full ${deviceType === 'tablet' ? 'mt-8' : deviceType === 'laptop' || deviceType === 'desktop' ? 'lg:w-2/5' : 'w-full'} flex flex-col items-center ${deviceType === 'laptop' || deviceType === 'desktop' ? 'lg:items-start' : 'items-center'} justify-center mt-10 lg:mt-0`}
+                >
+                    <div
+                        className={`${deviceType === 'laptop' || deviceType === 'desktop' ? 'text-center lg:text-left' : 'text-center'} max-w-md`}
+                    >
                         <p className="text-sm md:text-base text-gray-300 font-mono leading-relaxed">
                             I designed and developed a portfolio, beauty website, marketing platform, and House of Momos using WordPress, Tailwind, React, Figma, and Adobe, ensuring scalability, responsiveness, and user-friendly designs.
                         </p>
 
                         <div className="mt-8 flex justify-center lg:justify-start">
-                            <button className="px-6 py-3 bg-teal-600 text-white text-xs uppercase tracking-wider rounded hover:bg-teal-700 transition-colors">
-                                VIEW PROJECTS
+                            <button
+
+                                className="px-6 py-3 bg-teal-600 text-white text-xs uppercase tracking-wider rounded hover:bg-teal-700 transition-colors"
+                            >
+                                <a href='/project' >VIEW PROJECTS</a>
                             </button>
                         </div>
                     </div>

@@ -73,10 +73,10 @@ const SkillsSection = () => {
                             </div>
 
                             <div className="bg-gradient-to-br from-black/10 to-gray-900 p-4 md:p-6 rounded-xl w-full sm:w-auto mt-6 sm:mt-0">
-                            <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 md:gap-4">                                    <div className="bg-black/30 rounded-lg p-3 md:p-4 transform transition-transform hover:scale-105">
-                                        <div className="text-lg sm:text-xl md:text-2xl font-bold text-blue-400">4+</div>
-                                        <div className="text-gray-300 text-xs sm:text-sm">Years Experience</div>
-                                    </div>
+                                <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 md:gap-4">                                    <div className="bg-black/30 rounded-lg p-3 md:p-4 transform transition-transform hover:scale-105">
+                                    <div className="text-lg sm:text-xl md:text-2xl font-bold text-blue-400">4+</div>
+                                    <div className="text-gray-300 text-xs sm:text-sm">Years Experience</div>
+                                </div>
                                     <div className="bg-black/30 rounded-lg p-3 md:p-4 transform transition-transform hover:scale-105">
                                         <div className="text-lg sm:text-xl md:text-2xl font-bold text-indigo-400">5+</div>
                                         <div className="text-gray-300 text-xs sm:text-sm">Projects</div>

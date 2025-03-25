@@ -23,63 +23,13 @@ export default function Herosection() {
         className="absolute inset-0 z-0 bg-cover bg-center "
         style={{
           backgroundImage: "url('/Images/BackgroundImage.png')",
-          opacity: 0.5
+
         }}
       />
 
       <div className="relative z-10">
         {/* navbar */}
-        <nav className="flex justify-between items-center px-4 sm:px-6 lg:px-8 py-6">
-          <div className="text-teal-400 text-xl font-bold">
-            Sasin<span className="text-white">._</span>
-          </div>
 
-          <div className="hidden  md:flex flex-1 justify-center mr-[5rem] gap-4 lg:gap-10">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`${link.active ? 'text-teal-400' : 'text-white'
-                  } hover:text-teal-400 transition-colors`}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile Navigation */}
-          <div className="md:hidden">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
-                <button className="text-white hover:text-teal-400 transition-colors">
-                  <Menu size={24} />
-                </button>
-              </SheetTrigger>
-              <SheetContent side="right" className="bg-gray-900 border-gray-800 text-white p-0">
-                <div className="flex flex-col h-full p-6">
-                  <div className="flex justify-end mb-8">
-                    <button onClick={() => setIsOpen(false)}>
-                      <X size={24} className="text-white hover:text-teal-400" />
-                    </button>
-                  </div>
-                  <div className="flex flex-col gap-6">
-                    {navLinks.map((link) => (
-                      <Link
-                        key={link.name}
-                        href={link.href}
-                        onClick={() => setIsOpen(false)}
-                        className={`${link.active ? 'text-teal-400' : 'text-white'
-                          } text-lg hover:text-teal-400 transition-colors`}
-                      >
-                        {link.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
-        </nav>
 
         {/* Hero Content */}
         <div className="flex flex-col items-center justify-center mt-8 sm:mt-16 lg:mt-24 px-4">
