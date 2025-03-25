@@ -1,22 +1,15 @@
 'use client';
-import backgroundimage from '../../../public/Images/Imagebackground.png';
-import ReactIcon from '../../../public/Images/ReactICon.png';
-import Figma from '../../../public/Images/Figma.png'; //
-import NodeJs from '../../../public/Images/NodeJs.png';
 import React from 'react';
-
 
 export default function ExpertiseSection() {
     return (
         <section className="w-full py-12 relative overflow-hidden bg-black text-white">
-
             <div className="absolute inset-0 z-0">
                 <div
                     className="absolute inset-0 bg-cover mt-35 h-[50vh] sm: mt-55 bg-center"
-                    style={{ backgroundImage: `url(${backgroundimage.src})`, opacity: 0.5 }}
+                    style={{ backgroundImage: `url(/Images/Imagebackground.png)`, opacity: 0.5 }}
                 />
             </div>
-
 
             {/* Content */}
             <div className="relative z-10 container mx-auto px-4">
@@ -31,9 +24,8 @@ export default function ExpertiseSection() {
                                     <td className="p-6 md:p-8 border-r border-gray-700 w-1/3">
                                         <div className="flex items-center mb-4">
                                             <div className="mr-3 w-8 h-8">
-
                                                 <div className="w-8 h-8">
-                                                    <img src={ReactIcon.src} alt="Frontend" className="w-full h-full object-contain" />
+                                                    <img src="/Images/ReactICon.png" alt="Frontend" className="w-full h-full object-contain" />
                                                 </div>
                                             </div>
                                             <div>
@@ -51,9 +43,8 @@ export default function ExpertiseSection() {
                                     <td className="p-6 md:p-8 border-r border-gray-700 w-1/3">
                                         <div className="flex items-center mb-4">
                                             <div className="mr-3 w-8 h-8">
-
                                                 <div className="w-8 h-8 text-yellow-400">
-                                                    <img src={Figma.src} alt="UI/UX" className="w-full h-full object-contain" />
+                                                    <img src="/Images/Figma.png" alt="UI/UX" className="w-full h-full object-contain" />
                                                 </div>
                                             </div>
                                             <div>
@@ -71,9 +62,8 @@ export default function ExpertiseSection() {
                                     <td className="p-6 md:p-8 w-1/3">
                                         <div className="flex items-center mb-4">
                                             <div className="mr-3 w-8 h-8">
-
                                                 <div className="w-8 h-8 text-green-400">
-                                                    <img src={NodeJs.src} alt="Backend" className="w-full h-full object-contain" />
+                                                    <img src="/Images/NodeJs.png" alt="Backend" className="w-full h-full object-contain" />
                                                 </div>
                                             </div>
                                             <div>
@@ -97,9 +87,8 @@ export default function ExpertiseSection() {
                             <div className="p-6 border-b border-gray-700 last:border-b-0">
                                 <div className="flex items-center mb-4">
                                     <div className="mr-3 w-8 h-8">
-
                                         <div className="w-8 h-8 text-teal-400">
-                                            <img src={ReactIcon.src} alt="Frontend" className="w-full h-full object-contain" />
+                                            <img src="/Images/ReactICon.png" alt="Frontend" className="w-full h-full object-contain" />
                                         </div>
                                     </div>
                                     <div>
@@ -116,14 +105,13 @@ export default function ExpertiseSection() {
                             <div className="p-6 border-b border-gray-700 last:border-b-0">
                                 <div className="flex items-center mb-4">
                                     <div className="mr-3 w-8 h-8">
-
                                         <div className="w-8 h-8 text-yellow-400">
-                                            <img src={Figma.src} alt="UI/UX" className="w-full h-full object-contain" />
+                                            <img src="/Images/Figma.png" alt="UI/UX" className="w-full h-full object-contain" />
                                         </div>
                                     </div>
                                     <div>
                                         <h3 className="text-yellow-400 font-bold text-lg">UI/UX</h3>
-                                        <p className="text-yell font-bold">Designer</p>
+                                        <p className="text-yellow-400 font-bold">Designer</p>
                                     </div>
                                 </div>
 
@@ -135,13 +123,12 @@ export default function ExpertiseSection() {
                             <div className="p-6 border-b border-gray-700 last:border-b-0">
                                 <div className="flex items-center mb-4">
                                     <div className="mr-3 w-8 h-8">
-
                                         <div className="w-8 h-8 text-green-400">
-                                            <img src={NodeJs.src} alt="Backend" className="w-full h-full object-contain" />
+                                            <img src="/Images/NodeJs.png" alt="Backend" className="w-full h-full object-contain" />
                                         </div>
                                     </div>
                                     <div>
-                                     W   <h3 className="text-green-400 font-bold text-lg">Backend</h3>
+                                        <h3 className="text-green-400 font-bold text-lg">Backend</h3>
                                         <p className="text-white font-bold">Development</p>
                                     </div>
                                 </div>
