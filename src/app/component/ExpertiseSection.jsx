@@ -25,7 +25,7 @@ export default function ExpertiseSection() {
                                         <div className="flex items-center mb-4">
                                             <div className="mr-3 w-8 h-8">
                                                 <div className="w-8 h-8">
-                                                    <img src="/Images/ReactICon.png" alt="Frontend" className="w-full h-full object-contain" />
+                                                    <img src="/Images/ReactIcon.png" alt="Frontend" className="w-full h-full object-contain" />
                                                 </div>
                                             </div>
                                             <div>
@@ -63,7 +63,7 @@ export default function ExpertiseSection() {
                                         <div className="flex items-center mb-4">
                                             <div className="mr-3 w-8 h-8">
                                                 <div className="w-8 h-8 text-green-400">
-                                                    <img src="/Images/NodeJs.png" alt="Backend" className="w-full h-full object-contain" />
+                                                    <img src="/Images/NodeJS.png" alt="Backend" className="w-full h-full object-contain" />
                                                 </div>
                                             </div>
                                             <div>
