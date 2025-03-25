@@ -13,10 +13,10 @@ function NavBar() {
      const [isOpen, setIsOpen] = useState(false);
 
       const navLinks = [
-        { name: 'Home', href: 'http://localhost:3000/#Home', active: true},
-        { name: 'Works', href: 'http://localhost:3000/#Works', active: false },
-        { name: 'About', href: 'http://localhost:3000/#About', active: false },
-        { name: 'Contact', href: 'http://localhost:3000/#Form', active: false },
+        { name: 'Home', href: 'https://portfolio-smoky-gamma-15.vercel.app/#Home', active: true},
+        { name: 'Works', href: 'https://portfolio-smoky-gamma-15.vercel.app/#Works', active: false },
+        { name: 'About', href: 'https://portfolio-smoky-gamma-15.vercel.app/#About', active: false },
+        { name: 'Contact', href: 'https://portfolio-smoky-gamma-15.vercel.app/#Form', active: false },
       ];
 
   return (
